@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FactoryA : IFactory
 {
-    public Weapon CreateWeapon()
+    public Weapon CreateWeapon(Transform holder)
     {
         GameObject WeaponPrefab = Resources.Load<GameObject>("Prefabs/WeaponA");
-        WeaponA weapon = GameObject.Instantiate(WeaponPrefab, GameManager.Instance.transform).GetComponent<WeaponA>();
+        WeaponA weapon = GameObject.Instantiate(WeaponPrefab, holder).GetComponent<WeaponA>();
         weapon.SetDamage(15);
 
         return weapon;

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IFactory
 {
-    Weapon CreateWeapon();
+    Weapon CreateWeapon(Transform holder);
 }
